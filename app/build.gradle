@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+android {
+    namespace 'com.derspusulasi'
+    compileSdk 35  // Play Store requirement: API 35 (Android 15)
+
+    // Signing Config
+    signingConfigs {
+        release {
+            storeFile file('derspusulasi-release.jks')
+            storePassword 'derspusulasi123'
+            keyAlias 'derspusulasi'
+            keyPassword 'derspusulasi123'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.derspusulasi"
+        minSdk 24  // Android 7.0+ (covers ~99% of active devices)
+        targetSdk 35  // Play Store requirement: API 35 (Android 15) - Deadline: Aug 31, 2025
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            // Production için optimizasyonlar
+            minifyEnabled true  // Kod küçültme ve obfuscation aktif
+            shrinkResources true  // Kullanılmayan kaynakları kaldır
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Release build için signing config
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false  // Debug'da kaynak küçültmeyi kapat
+            // applicationIdSuffix kaldırıldı - debug ve release aynı application ID kullanır
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.14'  // Updated for API 35 compatibility
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            // Keep all drawable resources
+            pickFirsts += ['**/drawable/**', '**/drawable-*/**']
+        }
+    }
+}
+
+dependencies {
+    // Core AndroidX - Updated for API 35 compatibility
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.6'
+    implementation 'androidx.activity:activity-compose:1.9.3'
+    
+    // Compose BOM - Updated for API 35
+    implementation platform('androidx.compose:compose-bom:2024.10.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material:material-icons-extended'
+    
+    // Splash Screen
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+    
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.8.6'
+    
+    // StateFlow & Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0'
+    
+    // JSON Serialization - Compatible with Kotlin 1.9.24
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3'
+    
+    // Navigation
+    implementation 'androidx.navigation:navigation-compose:2.8.4'
+    
+    // Date Picker
+    implementation 'androidx.compose.material3:material3-window-size-class'
+    
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    androidTestImplementation platform('androidx.compose:compose-bom:2024.10.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}

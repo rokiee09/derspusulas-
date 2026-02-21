@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- 
+    Tüm uygulama verileri yedeklenir (internal storage)
+    Bu, kullanıcı verilerinin Google Drive'a yedeklenmesini sağlar
+    Uygulama yeniden yüklendiğinde veriler geri yüklenir
+    -->
+    <include domain="file" path="." />
+</full-backup-content>

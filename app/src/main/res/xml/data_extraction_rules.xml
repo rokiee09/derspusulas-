@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <!-- Android 12+ için veri çıkarma kuralları -->
+    <cloud-backup>
+        <!-- Tüm uygulama verileri bulut yedeklemesine dahil -->
+        <include domain="file" path="." />
+    </cloud-backup>
+    
+    <device-transfer>
+        <!-- Cihaz transferi sırasında veriler aktarılır -->
+        <include domain="file" path="." />
+    </device-transfer>
+</data-extraction-rules>

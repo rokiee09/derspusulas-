@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası - DersPusulası</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1976d2;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            color: #424242;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #1976d2;
+            margin: 20px 0;
+        }
+        
+        .contact {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        
+        .check {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #f44336;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gizlilik Politikası - DersPusulası</h1>
+        <p class="last-updated"><strong>Son Güncelleme:</strong> 8 Şubat 2026</p>
+        
+        <h2>Giriş</h2>
+        <p>DersPusulası ("Biz", "Bizim", "Uygulama"), kullanıcı gizliliğine büyük önem verir. Bu gizlilik politikası, uygulamamızın veri toplama, kullanma ve koruma uygulamalarını açıklar.</p>
+        
+        <h2>Veri Toplama</h2>
+        <div class="highlight">
+            <p><strong>DersPusulası hiçbir kişisel veri toplamaz, saklamaz veya paylaşmaz.</strong></p>
+        </div>
+        <p>Uygulama tamamen offline çalışır ve internet bağlantısı gerektirmez. Bu nedenle:</p>
+        <ul>
+            <li>Kullanıcı bilgileri toplanmaz</li>
+            <li>Konum verileri toplanmaz</li>
+            <li>Cihaz bilgileri toplanmaz</li>
+            <li>Analitik veriler toplanmaz</li>
+            <li>Reklam kimlikleri toplanmaz</li>
+        </ul>
+        
+        <h2>Yerel Veri Saklama</h2>
+        <p>Uygulama içinde oluşturduğunuz tüm veriler sadece cihazınızda saklanır:</p>
+        <ul>
+            <li>Yapılacaklar listesi</li>
+            <li>Soru çözüm kayıtları</li>
+            <li>Pomodoro zamanlayıcı verileri</li>
+            <li>Uygulama ayarları</li>
+        </ul>
+        <p>Bu veriler:</p>
+        <ul>
+            <li>Hiçbir zaman sunuculara gönderilmez</li>
+            <li>Üçüncü taraflarla paylaşılmaz</li>
+            <li>İnternet üzerinden aktarılmaz</li>
+            <li>Sadece cihazınızda JSON dosyaları olarak saklanır</li>
+        </ul>
+        
+        <h2>Üçüncü Taraf Servisleri</h2>
+        <p>DersPusulası hiçbir üçüncü taraf servisi kullanmaz:</p>
+        <ul>
+            <li><span class="cross">❌</span> Analitik servisleri (Google Analytics, Firebase Analytics, vb.)</li>
+            <li><span class="cross">❌</span> Reklam servisleri (Google AdMob, vb.)</li>
+            <li><span class="cross">❌</span> Sosyal medya entegrasyonları</li>
+            <li><span class="cross">❌</span> Bulut depolama servisleri</li>
+            <li><span class="cross">❌</span> Crash reporting servisleri</li>
+        </ul>
+        
+        <h2>İzinler</h2>
+        <p>Uygulama sadece aşağıdaki izinleri kullanır:</p>
+        
+        <h3>1. Bildirim İzni (POST_NOTIFICATIONS)</h3>
+        <p>Pomodoro zamanlayıcısı ve hatırlatıcılar için kullanılır. Kullanıcı izni olmadan çalışmaz.</p>
+        
+        <h3>2. Titreşim İzni (VIBRATE)</h3>
+        <p>Bildirimlerde titreşim için kullanılır.</p>
+        
+        <div class="highlight">
+            <p><strong>Önemli:</strong> Uygulama internet erişim izni istemez ve kullanmaz.</p>
+        </div>
+        
+        <h2>Çocukların Gizliliği</h2>
+        <p>DersPusulası 13 yaş altındaki çocuklardan bilerek veri toplamaz. Uygulama eğitim amaçlıdır ve tüm yaş grupları için güvenlidir.</p>
+        
+        <h2>Veri Güvenliği</h2>
+        <p>Verileriniz sadece cihazınızda saklandığı için:</p>
+        <ul>
+            <li>Cihazınızın güvenliği verilerinizin güvenliğidir</li>
+            <li>Cihazınızı kaybederseniz veya uygulamayı silerseniz, veriler silinir</li>
+            <li>Verilerinizi yedeklemek için cihazınızın yedekleme özelliklerini kullanabilirsiniz</li>
+        </ul>
+        
+        <h2>Gizlilik Politikası Değişiklikleri</h2>
+        <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişikliklerde kullanıcılar bilgilendirilecektir. Bu sayfanın "Son Güncelleme" tarihini kontrol ederek güncel politikayı görebilirsiniz.</p>
+        
+        <div class="contact">
+            <h2>İletişim</h2>
+            <p>Gizlilik politikamız hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
+            <p><strong>E-posta:</strong> [E-posta adresinizi buraya ekleyin - Play Store için gerekli]</p>
+        </div>
+        
+        <h2>Onay</h2>
+        <p>Bu uygulamayı kullanarak, bu gizlilik politikasını kabul etmiş olursunuz. Politikayı kabul etmiyorsanız, lütfen uygulamayı kullanmayın.</p>
+        
+        <div class="highlight" style="margin-top: 30px;">
+            <p><strong>Not:</strong> Bu gizlilik politikası, DersPusulası uygulamasının veri toplamama ve gizlilik odaklı yaklaşımını yansıtmaktadır. Uygulama tamamen offline çalışır ve kullanıcı gizliliğini korumak için tasarlanmıştır.</p>
+        </div>
+    </div>
+</body>
+</html>
