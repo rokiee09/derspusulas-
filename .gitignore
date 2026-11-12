@@ -82,3 +82,7 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# Yerel notlar ve yardımcı betikler (commit edilmez)
+/PLAY_STORE_DURUM.md
+/find-aab.bat
